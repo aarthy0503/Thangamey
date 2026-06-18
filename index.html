@@ -1,4 +1,4 @@
-u<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -251,16 +251,7 @@ var(--lav-pink)
 .photo-card:hover{
     transform:translateY(-8px);
 }
-.photo-card{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .8s ease;
-}
 
-.photo-card.show{
-    opacity:1;
-    transform:translateY(0);
-}
 
 /* IMAGE AREA */
 .photo-image{
@@ -1103,18 +1094,6 @@ var(--lav-pink)
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el=>observer.observe(el));
-<script>
-const timelineItems = document.querySelectorAll('.tl-item');
-
-const tlObserver = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-},{threshold:.15});
-
-timelineItems.forEach(item=>tlObserver.observe(item));
 
 
 </script>
