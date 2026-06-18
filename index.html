@@ -15,6 +15,10 @@
     --deep: #3B1A22;
     --lilac: #D4AACC;
     --mint: #A8D5C2;
+  --lav-pink: #ffd6e7;
+--rose-dark: #b02a4c;
+--white: #ffffff;
+--plum: #6b3b52;
   }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -453,6 +457,13 @@ var(--lav-pink)
     cursor: pointer;
     width: 100%;
   }
+ .fav-slot a{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  width:100%;
+  text-decoration:none;
+}
 
   /* edit mode */
   .slot-edit {
@@ -926,31 +937,38 @@ var(--lav-pink)
     </div>
 
     <!-- Songs -->
-    <div class="fav-card">
-      <h3>🎵 Our Songs</h3>
-      <div class="fav-slot" onclick="editSlot(this)">
-        <span class="fav-slot-icon">🎶</span>
-         <a href="https://open.spotify.com/track/7acN9HaStRBkP2UTOOpQ9q?si=7b4b029dda3c42a6" target="_blank" class="fav-slot"></a>
-        <span class="fav-slot-text"> PARAVAIYE ENGU IRUKIRAI</span>
-      </div>
-      <div class="fav-slot" onclick="editSlot(this)">
-        <span class="fav-slot-icon">🎶</span>
-        <a href="https://open.spotify.com/track/7acN9HaStRBkP2UTOOpQ9q?si=7b4b029dda3c42a6" target="_blank" class="fav-slot"></a>
-        <span class="fav-slot-text"> KADHAL YENULLE VANTHA</span>
-      </div>
-      <div class="fav-slot" onclick="editSlot(this)">
-        <span class="fav-slot-icon">🎶</span>
-        <a href="https://open.spotify.com/track/5eoah7D3oxCqz6n0clmC0I?si=049b8cc9e8d64fc6" target="_blank" class="fav-slot"></a>
-        <span class="fav-slot-text">ANALUM INTHA MAYAKAM</span>
-      </div>
-      <div class="fav-slot" onclick="editSlot(this)">
-        <span class="fav-slot-icon">🎶</span>
-        <a href="https://open.spotify.com/track/7jTckWfmdzlfw1fOUBU7xh?si=e9a3e50f42a04598" target="_blank" class="fav-slot"></a>
-        <span class="fav-slot-text"> POGATHEY</span>
-      </div>
-    </div>
+<!-- Songs -->
+<div class="fav-card">
+  <h3>🎵 Our Songs</h3>
 
+  <div class="fav-slot">
+    <a href="https://open.spotify.com/track/7acN9HaStRBkP2UTOOpQ9q?si=7b4b029dda3c42a6" target="_blank">
+      <span class="fav-slot-icon">🎶</span>
+      <span class="fav-slot-text">PARAVAIYE ENGU IRUKIRAI</span>
+    </a>
   </div>
+
+  <div class="fav-slot">
+    <a href="https://open.spotify.com/track/5eoah7D3oxCqz6n0clmC0I?si=8e3a60de82c2426f" target="_blank">
+      <span class="fav-slot-icon">🎶</span>
+      <span class="fav-slot-text">KADHAL YENULLE VANTHA</span>
+    </a>
+  </div>
+
+  <div class="fav-slot">
+    <a href="https://open.spotify.com/track/0P91S7GzNACMcEDTnDo5BP?si=9c06afdc30934d74" target="_blank">
+      <span class="fav-slot-icon">🎶</span>
+      <span class="fav-slot-text">ANALUM INTHA MAYAKAM</span>
+    </a>
+  </div>
+
+  <div class="fav-slot">
+    <a href="https://open.spotify.com/track/7jTckWfmdzlfw1fOUBU7xh?si=221059b5fe684454" target="_blank">
+      <span class="fav-slot-icon">🎶</span>
+      <span class="fav-slot-text">POGATHEY</span>
+    </a>
+  </div>
+</div>
 </section>
 
 <!-- ───── CUTE SNAPS ───── -->
