@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thangamey 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+ :root {
+    --rose: #E8637A;
+    --blush: #F9C4CE;
+    --cream: #FFF8F9;
+    --gold: #C9935A;
+    --deep: #3B1A22;
+    --lilac: #D4AACC;
+    --mint: #A8D5C2;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:'Quicksand', sans-serif;
+   background: linear-gradient(
+180deg,
+var(--lav-pink),
+var(--rose),
+var(--rose-dark),
+var(--lav-pink)
+);}
+
+  /* ---------- Floating background hearts/flowers ---------- */
+  #bg-float{
+    position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden;
+  }
+  .float-item{
+    position:absolute;
+    bottom:-10%;
+    font-size:22px;
+    opacity:0.55;
+    animation: floatUp linear infinite;
+    filter: drop-shadow(0 2px 4px rgba(214,51,108,0.15));
+  }
+  @keyframes floatUp{
+    0%{ transform:translateY(0) translateX(0) rotate(0deg); opacity:0; }
+    10%{ opacity:0.6; }
+    50%{ transform:translateY(-55vh) translateX(20px) rotate(180deg); }
+    90%{ opacity:0.5; }
+    100%{ transform:translateY(-110vh) translateX(-15px) rotate(360deg); opacity:0; }
+  }
+
+  section{ position:relative; z-index:2; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+  }
+
+  .eyebrow{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--rose);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+
+  .couple-names{
+    font-family:'Dancing Script', cursive;
+    font-size:clamp(26px, 5.5vw, 44px);
+    font-weight:700;
+    letter-spacing:1px;
+    color:var(--rose-dark);
+    margin-bottom:6px;
+    opacity:0.95;
+  }
+
+  .hero h1{
+    font-family:'Dancing Script', cursive;
+    font-size:clamp(48px, 11vw, 110px);
+    color:var(--rose);
+    line-height:1;
+    text-shadow: 2px 2px 0 rgba(232,182,84,0.35);
+  }
+
+  .hero .names{
+    font-family:'Dancing Script', cursive;
+    font-size:clamp(20px, 4vw, 30px);
+    color:var(--plum);
+    margin-top:6px;
+    font-weight:700;
+  }
+
+  .hero .pet-names{
+    margin-top:22px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .pill{
+    background:var(--white);
+    border:1.5px solid var(--lav-pink);
+    color:var(--rose-dark);
+    padding:8px 20px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.5px;
+    box-shadow:0 4px 14px rgba(214,51,108,0.08);
+    animation: bob 3.5s ease-in-out infinite;
+  }
+  .pill:nth-child(2){ animation-delay:0.4s; }
+  .pill:nth-child(3){ animation-delay:0.8s; }
+  @keyframes bob{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+  }
+
+  .hero-heart{
+    margin-top:34px;
+    width:120px; height:120px;
+    position:relative;
+  }
+  .hero-heart svg{
+    width:100%; height:100%;
+    animation: beat 1.4s ease-in-out infinite;
+    filter: drop-shadow(0 6px 16px rgba(214,51,108,0.35));
+  }
+  @keyframes beat{
+    0%,100%{ transform:scale(1); }
+    25%{ transform:scale(1.08); }
+    40%{ transform:scale(0.98); }
+    55%{ transform:scale(1.12); }
+    70%{ transform:scale(1); }
+  }
+
+  .counter-wrap{
+    margin-top:26px;
+    font-size:15px;
+    color:var(--plum);
+    opacity:0.85;
+  }
+  .counter-num{
+    font-family:'Dancing Script', cursive;
+    font-size:42px;
+    color:var(--rose);
+    font-weight:700;
+    display:block;
+  }
+  .since-date{
+    font-size:13px;
+    color:var(--rose-dark);
+    margin-top:2px;
+    letter-spacing:0.5px;
+  }
+
+  .scroll-hint{
+    position:absolute;
+    bottom:28px;
+    font-size:13px;
+    color:var(--rose-dark);
+    opacity:0.7;
+    animation: bob 2.4s ease-in-out infinite;
+  }
+
+  /* ---------- Section shared ---------- */
+  .section-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:90px 24px;
+  }
+  .section-title{
+    font-family:'Dancing Script', cursive;
+    font-size:clamp(34px, 6vw, 54px);
+    color:var(--rose);
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .section-sub{
+    text-align:center;
+    color:var(--plum);
+    opacity:0.7;
+    font-size:15px;
+    margin-bottom:48px;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+ /* ===== GALLERY SECTION ===== */
+
+#gallery{
+    padding:100px 8%;
+    background:#fff6f8;
+}
+
+.section-title{
+    text-align:center;
+    font-size:52px;
+    color:#ff6b8b;
+    font-family:'Dancing Script',cursive;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:#ff5a7a;
+}
+
+
+/* GRID */
+.gallery-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+
+/* CARD */
+.photo-card{
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.photo-card:hover{
+    transform:translateY(-8px);
+}
+
+
+/* IMAGE AREA */
+.photo-image{
+    aspect-ratio:4/5;      /* 4:5 photos */
+    background:#f9dbe5;
+    overflow:hidden;
+}
+
+.photo-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* INFO AREA */
+.photo-info{
+    background:white;
+    padding:22px;
+}
+
+.photo-info h3{
+    font-size:34px;
+    color:#ff8da6;
+    font-family:'Playfair Display',serif;
+    margin-bottom:10px;
+    font-style:italic;
+    font-weight:500;
+}
+
+.photo-info p{
+    color:#6e4a57;
+    font-size:15px;
+    line-height:1.7;
+}
+
+  /* ── TIMELINE ── */
+  #timeline {
+    padding: 5rem 2rem;
+    background: #fff5f7;
+  }
+
+  .tl-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .tl-wrap::before {
+    content: '';
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--blush), var(--rose), var(--lilac), var(--blush));
+    border-radius: 4px;
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+    align-items: flex-start;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+}
+  .tl-item.visible { opacity: 1; transform: translateY(0); }
+
+  .tl-item:nth-child(odd) { flex-direction: row; }
+  .tl-item:nth-child(even) { flex-direction: row-reverse; }
+
+  .tl-content {
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 4px 24px rgba(232,99,122,.1);
+    border-left: 4px solid var(--rose);
+    position: relative;
+  }
+  .tl-item:nth-child(even) .tl-content { border-left: none; border-right: 4px solid var(--lilac); }
+
+  .tl-photo {
+    flex: 1;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    min-height: 180px;
+    background: linear-gradient(135deg, #ffe0ea, #f9d6f0);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+  }
+  .tl-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .tl-photo-label {
+    position: absolute;
+    bottom: 8px; left: 0; right: 0;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: .9rem;
+    color: var(--deep);
+    opacity: .7;
+  }
+
+  .tl-dot {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    top: 18px;
+    width: 18px; height: 18px;
+    background: var(--rose);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--rose);
+    z-index: 2;
+  }
+  .tl-dot::after {
+    content: '♥';
+    position: absolute;
+    top: -22px; left: 50%; transform: translateX(-50%);
+    font-size: .7rem; color: var(--rose);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse { 0%,100%{transform:translateX(-50%) scale(1);} 50%{transform:translateX(-50%) scale(1.5);} }
+
+  .tl-date {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: var(--rose);
+    font-weight: 700;
+    margin-bottom: .3rem;
+  }
+  .tl-desc { font-size: .93rem; color: #7a4a55; line-height: 1.6; }
+  .tl-emoji { font-size: 1.4rem; margin-bottom: .4rem; display: block; }
+
+   /* ── FAVORITES ── */
+  #favorites {
+    padding: 5rem 2rem;
+    background: linear-gradient(160deg, #2c1a2e 0%, #3d2040 100%);
+  }
+  #favorites .section-title { color: #f9d6e8; }
+
+  .fav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .fav-card {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(249,196,206,.25);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform .3s, background .3s;
+  }
+  .fav-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.12);
+  }
+
+  .fav-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--blush);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: .5rem;
+  }
+
+  .fav-slot {
+    background: rgba(255,255,255,.06);
+    border: 1px dashed rgba(249,196,206,.3);
+    border-radius: 12px;
+    padding: .8rem 1rem;
+    margin-bottom: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+    transition: background .25s;
+    position: relative;
+  }
+  .fav-slot:hover { background: rgba(249,196,206,.12); }
+
+  .fav-slot-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .fav-slot-text {
+    font-size: .88rem;
+    color: rgba(249,220,226,.8);
+    font-style: italic;
+  }
+  .fav-slot-text.filled { color: #f9dcdf; font-style: normal; }
+
+  .fav-slot input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* edit mode */
+  .slot-edit {
+    background: rgba(255,255,255,.1);
+    border: 1px solid var(--blush);
+    border-radius: 8px;
+    padding: .4rem .7rem;
+    color: white;
+    font-size: .88rem;
+    width: 100%;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+  }
+
+  /* ===== CUTE SNAPS ===== */
+
+#snaps{
+    padding:100px 8%;
+    background:#fff8fb;
+}
+
+.snap-subtitle{
+    text-align:center;
+    color:#a16b79;
+    margin-bottom:50px;
+    font-style:italic;
+}
+
+.snap-wall{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:40px;
+    justify-items:center;
+}
+
+.snap-frame{
+    width:180px;
+    background:white;
+    padding:12px 12px 18px;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    transform:rotate(var(--r));
+    transition:.4s;
+}
+
+.snap-frame:hover{
+    transform:rotate(0deg) scale(1.05);
+}
+
+.snap-frame img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+}
+
+.snap-label{
+    text-align:center;
+    margin-top:14px;
+    color:#9b6372;
+    font-family:'Dancing Script',cursive;
+    font-size:1.2rem;
+}
+ /* ── LOVE LETTER ── */
+  #letter {
+    padding: 5rem 2rem;
+    background: linear-gradient(160deg, #ffe4ec 0%, #ffd6e7 100%);
+    text-align: center;
+  }
+  .letter-box {
+    max-width: 620px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 12px 48px rgba(232,99,122,.18);
+    position: relative;
+  }
+  .letter-box::before {
+    content: '💌';
+    position: absolute;
+    top: -20px; left: 50%; transform: translateX(-50%);
+    font-size: 2.5rem;
+    filter: drop-shadow(0 4px 8px rgba(232,99,122,.3));
+  }
+  .letter-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+    color: var(--deep);
+    line-height: 2;
+  }
+  .letter-sign {
+    margin-top: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--rose);
+    font-size: 1.4rem;
+  }
+/* ── FINAL LOVE SECTION (ABOVE FOOTER) ── */
+.final-love-section{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 80px 20px;
+  background: linear-gradient(160deg, #ffe4ec, #ffd6e7, #f8c8da);
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft glow background */
+.final-love-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(232,99,122,0.15), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(212,170,204,0.2), transparent 60%);
+  z-index:0;
+}
+
+.final-love-section *{
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
+.final-title{
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(42px, 9vw, 100px);
+  line-height: 1.1;
+  color: #E8637A;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.final-title span{
+  display: block;
+  color: #b02a4c;
+}
+
+/* SUBTITLE */
+.final-subtitle{
+  font-size: 1.2rem;
+  color: #6b3b52;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+/* BADGE */
+.final-badge{
+  background: rgba(255,255,255,0.6);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #b02a4c;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* FLOATING HEART */
+.final-heart{
+  margin-top: 30px;
+  font-size: 2rem;
+  animation: floatHeart 2.5s infinite ease-in-out;
+}
+
+@keyframes floatHeart{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-12px); }
+}
+/* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--deep);
+    color: var(--blush);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+  }
+ 
+</style>
+</head>
+<body>
+
+<div id="bg-float"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="eyebrow">since 17 . 04 . 2018</div>
+  <div class="couple-names">Nandhan &amp; Aarthy</div>
+  <h1>Thangamey</h1>
+  <div class="names">a little world that's just ours</div>
+
+  <div class="pet-names">
+    <span class="pill">Baby</span>
+    <span class="pill">Babe</span>
+    <span class="pill">Thangamey</span>
+  </div>
+
+  <div class="hero-heart">
+    <svg viewBox="0 0 100 100">
+      <path d="M50 88 C20 65, 5 45, 5 28 C5 12, 18 2, 32 2 C42 2, 48 8, 50 14 C52 8, 58 2, 68 2 C82 2, 95 12, 95 28 C95 45, 80 65, 50 88 Z" fill="#D6336C"/>
+    </svg>
+  </div>
+
+  <div class="counter-wrap">
+    <span class="counter-num" id="dayCounter">0</span>
+    days of us, and counting
+    <div class="since-date">17th April 2018 → today</div>
+  </div>
+
+  <div class="scroll-hint">scroll down, baby ↓</div>
+</section>
+<!-- ───────── PHOTO GALLERY ───────── -->
+<section id="gallery">
+
+    <h2 class="section-title">
+        Our Lovely Moments <span>♥</span>
+    </h2>
+
+    <div class="gallery-grid">
+
+        <!-- Card 1 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="imag3.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>✨ Every</h3>
+                <p>"You make every moment beautiful." 🌺</p>
+            </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="img1.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>💞 Memory</h3>
+                <p>Every laugh, every smile — it's all you, baby 💕</p>
+            </div>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="image2.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>🌹 with</h3>
+                <p>Even the hard times felt softer with you beside me 🤍</p>
+            </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="image4.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>🦋 you</h3>
+                <p>Celebrating us, always, my babe 🎉</p>
+            </div>
+        </div>
+
+
+        <!-- Card 5 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="image5.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>⭐ is</h3>
+                <p>Late nights & deep talks — our kind of magic 🌙</p>
+            </div>
+        </div>
+
+
+        <!-- Card 6 -->
+        <div class="photo-card">
+            <div class="photo-image">
+                <img src="3.jpg" alt="">
+            </div>
+
+            <div class="photo-info">
+                <h3>💫 precious.</h3>
+                <p>Growing, glowing, loving — together, thangamey 🌺</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ── TIMELINE ── -->
+<section id="timeline">
+  <h2 class="section-title">Our Story, Chapter by Chapter <span class="heart">♥</span></h2>
+
+  <div class="tl-wrap" id="tlWrap">
+
+    <div class="tl-item">
+      <div class="tl-content">
+        <div class="tl-date">17 April 2018</div>
+        <span class="tl-emoji">🌸</span>
+        <div class="tl-desc">The day it all began, thangamey. One moment, one look — and the rest of the world went quiet.</div>
+      </div>
+      <div class="tl-dot"></div>
+     <div class="tl-photo">
+  <img src="1.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-photo">
+  <img src="late2018.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">Late 2018</div>
+        <span class="tl-emoji">💬</span>
+        <div class="tl-desc">Late-night texts that turned into all-night calls. Baby, you made every conversation feel like coming home.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-content">
+        <div class="tl-date">2019</div>
+        <span class="tl-emoji">🎬</span>
+        <div class="tl-desc"> Our first silly inside jokes. The world could wait — we had each other.</div>
+      </div>
+      <div class="tl-dot"></div>
+       <div class="tl-photo">
+  <img src="2019.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+       <div class="tl-photo">
+  <img src="2020.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA✦</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2020</div>
+        <span class="tl-emoji">🤍</span>
+        <div class="tl-desc">The world outside was tough, but inside our little bubble — it was just warmth, laughter, and you.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-content">
+        <div class="tl-date">2021</div>
+        <span class="tl-emoji">✈️</span>
+        <div class="tl-desc">New places, new memories — but the best part of every adventure is always you, babe.</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-photo">
+  <img src="2021.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA✦</div>
+      </div>
+    </div>
+<div class="tl-item">
+      <div class="tl-content">
+        <div class="tl-date">2022</div>
+        <span class="tl-emoji">✈️</span>
+        <div class="tl-desc">New places, new memories — but the best part of every adventure is always you, babe.</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-photo">
+  <img src="2022.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-photo">
+  <img src="2023.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2023</div>
+        <span class="tl-emoji">🌟</span>
+        <div class="tl-desc">Growing together, laughing louder, loving deeper. Every year with you is my favourite yet, thangamey.</div>
+      </div>
+    </div>
+     <div class="tl-item">
+      <div class="tl-photo">
+  <img src="2024.JPG" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2024</div>
+        <span class="tl-emoji">🌟</span>
+        <div class="tl-desc">🌷 Hand in hand, heart to heart, year after year. Life is sweeter with you, thangamey.</div>
+      </div>
+    </div>
+     <div class="tl-item">
+      <div class="tl-photo">
+  <img src="2025.PNG" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-date">2025</div>
+        <span class="tl-emoji">🌟</span>
+        <div class="tl-desc">🌙 No matter where life takes us, my happiest place will always be right beside you, thangamey.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-content">
+        <div class="tl-date">Today — June 2026 ♥</div>
+        <span class="tl-emoji">💞</span>
+        <div class="tl-desc">Here we are, baby. Still us. Still magic. Still the best story I've ever been part of — and it's only getting better.</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-photo">
+  <img src="2026.jpg" alt="First Photo">
+  <div class="tl-photo-label">NA ✦</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FAVORITES ── -->
+<section id="favorites">
+  <h2 class="section-title">Our Favourite Things <span>🌸</span></h2>
+
+  <div class="fav-grid">
+
+    <!-- Movies -->
+    <div class="fav-card">
+      <h3>🎬 Our Movies</h3>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎥</span>
+        <span class="fav-slot-text"> DADA</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎥</span>
+        <span class="fav-slot-text"> LUBBER PANDHU</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎥</span>
+        <span class="fav-slot-text"> FOREVER MY GIRL</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎥</span>
+        <span class="fav-slot-text"> WITH LOVE</span>
+      </div>
+    </div>
+
+    <!-- Songs -->
+    <div class="fav-card">
+      <h3>🎵 Our Songs</h3>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎶</span>
+         <a href="https://open.spotify.com/track/7acN9HaStRBkP2UTOOpQ9q?si=7b4b029dda3c42a6" target="_blank" class="fav-slot"></a>
+        <span class="fav-slot-text"> PARAVAIYE ENGU IRUKIRAI</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎶</span>
+        <a href="https://open.spotify.com/track/7acN9HaStRBkP2UTOOpQ9q?si=7b4b029dda3c42a6" target="_blank" class="fav-slot"></a>
+        <span class="fav-slot-text"> KADHAL YENULLE VANTHA</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎶</span>
+        <a href="https://open.spotify.com/track/5eoah7D3oxCqz6n0clmC0I?si=049b8cc9e8d64fc6" target="_blank" class="fav-slot"></a>
+        <span class="fav-slot-text">ANALUM INTHA MAYAKAM</span>
+      </div>
+      <div class="fav-slot" onclick="editSlot(this)">
+        <span class="fav-slot-icon">🎶</span>
+        <a href="https://open.spotify.com/track/7jTckWfmdzlfw1fOUBU7xh?si=e9a3e50f42a04598" target="_blank" class="fav-slot"></a>
+        <span class="fav-slot-text"> POGATHEY</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ───── CUTE SNAPS ───── -->
+<section id="snaps">
+
+    <h2 class="section-title">
+        Cute Snaps 📷 <span class="heart">♥</span>
+    </h2>
+
+    <p class="snap-subtitle">
+        All the little stolen moments 🌸
+    </p>
+
+    <div class="snap-wall">
+
+        <div class="snap-frame" style="--r:-5deg">
+            <img src="snap1.jpg" alt="">
+            <div class="snap-label">Us 🌸</div>
+        </div>
+
+        <div class="snap-frame" style="--r:4deg">
+            <img src="snap2.jpg" alt="">
+            <div class="snap-label">Smiles 💕</div>
+        </div>
+
+        <div class="snap-frame" style="--r:-3deg">
+            <img src="snap3.jpg" alt="">
+            <div class="snap-label">Moon Nights 🌙</div>
+        </div>
+
+        <div class="snap-frame" style="--r:6deg">
+            <img src="snap4.jpg" alt="">
+            <div class="snap-label">Coffee Date ☕</div>
+        </div>
+
+        <div class="snap-frame" style="--r:-4deg">
+            <img src="snap5.jpg" alt="">
+            <div class="snap-label">Together 🌺</div>
+        </div>
+
+        <div class="snap-frame" style="--r:3deg">
+            <img src="snap6.jpg" alt="">
+            <div class="snap-label">Forever ✨</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- ── LOVE LETTER ── -->
+<section id="letter">
+  <h2 class="section-title">For You, Always <span class="heart">♥</span></h2>
+
+  <div class="letter-box">
+    <p class="letter-text">
+      Baby,<br><br>
+      From that very first moment to every ordinary Tuesday in between —
+      you have been the most extraordinary thing to ever happen to me.<br><br>
+      You are my favourite song on repeat, my warmest cup of coffee,
+      my home wherever I am.<br><br>
+      Thangamey, I choose you — yesterday, today, and in every chapter
+      this story has left to write. 🌸<br><br>
+      Loving you is the easiest thing I've ever done.
+    </p>
+    <div class="letter-sign">— Forever yours 💕</div>
+  </div>
+</section>
+<!-- FLOATING HEARTS & FLOWERS -->
+<div id="floaties"></div>
+
+<!-- ── FINAL LOVE SECTION (ABOVE FOOTER) ── -->
+<section class="final-love-section">
+  <h1 class="final-title">
+    <em>You, Me &</em><br>
+    <span>Forever After</span>
+  </h1>
+
+  <p class="final-subtitle">Baby 💗 Babe 🌸 Thangamey ✨</p>
+
+  <div class="final-badge">17 April 2018 → Always & Forever</div>
+
+  <div class="final-heart">🌸</div>
+</section>
+<!-- ── FOOTER ── -->
+<footer>
+  <p>You & Me • 17 April 2018 → Always 💗</p>
+  <p style="margin-top:.4rem;font-size:.9rem;opacity:.6;">Made with every bit of love I have 🌸</p>
+</footer>
+
+<script>
+  // ---- Floating hearts & flowers background ----
+  const floatContainer = document.getElementById('bg-float');
+  const symbols = ['💗','🌸','💕','🌷','✨'];
+  const FLOAT_COUNT = 18;
+  for(let i=0;i<FLOAT_COUNT;i++){
+    const el = document.createElement('div');
+    el.className = 'float-item';
+    el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left = Math.random()*100 + '%';
+    el.style.fontSize = (16 + Math.random()*18) + 'px';
+    const duration = 10 + Math.random()*14;
+    el.style.animationDuration = duration + 's';
+    el.style.animationDelay = (Math.random()*duration) + 's';
+    floatContainer.appendChild(el);
+  }
+
+  // ---- Day counter since 17 April 2018 ----
+  const startDate = new Date(2018, 3, 17); // month is 0-indexed: 3 = April
+  function updateCounter(){
+    const now = new Date();
+    const diffMs = now - startDate;
+    const days = Math.floor(diffMs / (1000*60*60*24));
+    document.getElementById('dayCounter').textContent = days.toLocaleString();
+  }
+  updateCounter();
+
+  // ---- Scroll reveal ----
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
